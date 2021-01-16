@@ -1,0 +1,29 @@
+
+syntax = "proto3";
+
+package pkg.proto.category.v1;
+option go_package = "github.com/gomaglev/protos/pkg/proto/category/v1;category";
+
+import "google/protobuf/timestamp.proto";
+import "pkg/proto/common/v1/common.proto";
+
+message Category {
+    // @inject_tag: faker:"uuid_hyphenated"
+    string id = 1 [json_name="id"];
+    // @inject_tag: faker:"oneof: 1, 0"
+    string status = 2;
+    // @inject_tag: faker:"-"
+    string parent_id = 3;
+    // @inject_tag: faker:"sentence"
+    string description = 4;
+    // @inject_tag: faker:"uuid_hyphenated"
+    string user_id = 5;
+    google.protobuf.Timestamp created_at = 6;
+    google.protobuf.Timestamp updated_at = 7;
+}
+
+message Categories {
+    repeated Category list = 1 [json_name="categories"];
+    common.v1.PaginationResult pagination = 2;
+}
+
