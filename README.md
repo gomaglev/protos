@@ -9,6 +9,8 @@ Copy BOTH `protoc` file and `include` folder to `${GOPATH}/bin/protoc`.
 
 Or you can use apt on Linux, brew on Mac.
 
+go install google.golang.org/grpc/cmd/protoc-gen-go-grpc
+
 ## Protobuf generation
 
 protos - Generate protobuf, grpc-gateway files:

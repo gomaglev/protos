@@ -45,13 +45,13 @@ func (m *OrderItem) Validate() error {
 
 	// no validation rules for Id
 
-	// no validation rules for OrderId
-
 	// no validation rules for Price
 
 	// no validation rules for Quantity
 
 	// no validation rules for ProductId
+
+	// no validation rules for OrderId
 
 	if v, ok := interface{}(m.GetCreatedAt()).(interface{ Validate() error }); ok {
 		if err := v.Validate(); err != nil {

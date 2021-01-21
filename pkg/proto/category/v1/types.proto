@@ -9,7 +9,7 @@ import "pkg/proto/common/v1/common.proto";
 
 message Category {
     // @inject_tag: faker:"uuid_hyphenated"
-    string id = 1 [json_name="id"];
+    string id = 1;
     // @inject_tag: faker:"oneof: 1, 0"
     string status = 2;
     // @inject_tag: faker:"-"
@@ -23,7 +23,7 @@ message Category {
 }
 
 message Categories {
-    repeated Category list = 1 [json_name="categories"];
+    repeated Category list = 1;
     common.v1.PaginationResult pagination = 2;
 }
 

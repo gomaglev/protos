@@ -20,7 +20,7 @@ message Order {
 }
 
 message Orders {
-    repeated Order list = 1 [json_name="orders"];
+    repeated Order list = 1;
     common.v1.PaginationResult pagination = 2;
 }
 

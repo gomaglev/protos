@@ -34,7 +34,7 @@ message Product {
 
 
 message Products {
-    repeated Product data = 1 [json_name="products"];
+    repeated Product list = 1;
     common.v1.PaginationResult pagination = 2;
 }
 
