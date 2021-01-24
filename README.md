@@ -11,6 +11,8 @@ Or you can use apt on Linux, brew on Mac.
 
 go install google.golang.org/grpc/cmd/protoc-gen-go-grpc
 
+[Step by step](https://gist.github.com/gomaglev/161d1a9e9d4c298556623a5e80221b97)
+
 ## Protobuf generation
 
 protos - Generate protobuf, grpc-gateway files:
