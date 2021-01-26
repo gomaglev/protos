@@ -1,4 +1,4 @@
-module github.com/gomaglev/protos/v2
+module github.com/gomaglev/protos
 
 go 1.15
 

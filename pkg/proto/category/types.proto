@@ -2,7 +2,7 @@
 syntax = "proto3";
 
 package pkg.proto.category;
-option go_package = "github.com/gomaglev/protos/v2/pkg/proto/category;category";
+option go_package = "github.com/gomaglev/protos/pkg/proto/category;category";
 
 import "google/protobuf/timestamp.proto";
 import "pkg/proto/common/common.proto";
