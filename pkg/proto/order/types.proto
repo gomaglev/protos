@@ -1,10 +1,10 @@
 syntax = "proto3";
 
-package pkg.proto.order.v1;
-option go_package = "github.com/gomaglev/protos/pkg/proto/order/v1;order";
+package pkg.proto.order;
+option go_package = "github.com/gomaglev/protos/v1/pkg/proto/order;order";
 
 import "google/protobuf/timestamp.proto";
-import "pkg/proto/common/v1/common.proto";
+import "pkg/proto/common/common.proto";
 
 // Order
 message Order {
@@ -21,6 +21,6 @@ message Order {
 
 message Orders {
     repeated Order list = 1;
-    common.v1.PaginationResult pagination = 2;
+    common.PaginationResult pagination = 2;
 }
 

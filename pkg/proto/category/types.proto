@@ -1,11 +1,11 @@
 
 syntax = "proto3";
 
-package pkg.proto.category.v1;
-option go_package = "github.com/gomaglev/protos/pkg/proto/category/v1;category";
+package pkg.proto.category;
+option go_package = "github.com/gomaglev/protos/v1/pkg/proto/category;category";
 
 import "google/protobuf/timestamp.proto";
-import "pkg/proto/common/v1/common.proto";
+import "pkg/proto/common/common.proto";
 
 message Category {
     // @inject_tag: faker:"uuid_hyphenated"
@@ -24,6 +24,6 @@ message Category {
 
 message Categories {
     repeated Category list = 1;
-    common.v1.PaginationResult pagination = 2;
+    common.PaginationResult pagination = 2;
 }
 

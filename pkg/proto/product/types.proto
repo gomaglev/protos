@@ -1,11 +1,11 @@
 
 syntax = "proto3";
 
-package pkg.proto.product.v1;
-option go_package = "github.com/gomaglev/protos/pkg/proto/product/v1;product";
+package pkg.proto.product;
+option go_package = "github.com/gomaglev/protos/v1/pkg/proto/product;product";
 
 import "google/protobuf/timestamp.proto";
-import "pkg/proto/common/v1/common.proto";
+import "pkg/proto/common/common.proto";
 
 // Product
 message Product {
@@ -35,6 +35,6 @@ message Product {
 
 message Products {
     repeated Product list = 1;
-    common.v1.PaginationResult pagination = 2;
+    common.PaginationResult pagination = 2;
 }
 
