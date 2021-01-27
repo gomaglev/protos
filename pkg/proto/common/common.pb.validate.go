@@ -129,10 +129,10 @@ func (m *PaginationResult) Validate() error {
 		return nil
 	}
 
-	if m.GetTotal() < 1 {
+	if m.GetTotal() < 0 {
 		return PaginationResultValidationError{
 			field:  "Total",
-			reason: "value must be greater than or equal to 1",
+			reason: "value must be greater than or equal to 0",
 		}
 	}
 
@@ -143,10 +143,10 @@ func (m *PaginationResult) Validate() error {
 		}
 	}
 
-	if m.GetPageSize() > 1000 {
+	if m.GetPageSize() > 10000 {
 		return PaginationResultValidationError{
 			field:  "PageSize",
-			reason: "value must be less than or equal to 1000",
+			reason: "value must be less than or equal to 10000",
 		}
 	}
 
