@@ -21,9 +21,9 @@ message PaginationParam {
 }
 
 message PaginationResult {
-    int32 total = 1 [(validate.rules).int32.gte = 1];
+    int64 total = 1 [(validate.rules).int64.gte = 0];
     int32 page = 2 [(validate.rules).int32.gte = 1];
-    int32 page_size = 3 [(validate.rules).int32.lte = 1000,json_name='page_size'];
+    int32 page_size = 3 [(validate.rules).int32.lte = 10000];
     string cursor = 4;
 }
 
